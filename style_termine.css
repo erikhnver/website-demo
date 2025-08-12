@@ -1,0 +1,272 @@
+/* ===== Grundlayout ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+/* ===== Header & Navigation ===== */
+header {
+    background-color: #e60000;
+    color: white;
+    padding: 20px 30px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+.nav-links li a:visited,
+.nav-links li a:active {
+    color: white;
+}
+
+/* ===== Pfeil neben "Fußball" ===== */
+.arrow-down {
+    font-size: 0.7em;
+    margin-left: 5px;
+}
+
+/* ===== Dropdown-Menü ===== */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffebeb;
+    color: black;
+    min-width: 160px;
+    z-index: 1000;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 4px;
+
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.dropdown-content li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 0;
+    border-bottom: 1px solid #eee;
+    padding-left: 0; /* entfernt den Leerbereich links */
+}
+
+.dropdown-content li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a {
+    color: black !important;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-weight: normal;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffebeb; /* bleibt weiß */
+    color: black;            /* bleibt schwarz */
+    text-decoration: underline; /* optional: leichter Hover-Effekt */
+}
+
+/* ===== Hover bleibt erhalten ===== */
+.dropdown:hover .dropdown-content,
+.dropdown .dropdown-content:hover {
+    display: block;
+}
+
+/* ===== Hamburger-Menü (drei Balken) ===== */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+    align-items: center;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    border-radius: 5px;
+}
+
+/* ===== Vertikales Untermenü für Turnen im Hamburger-Menü ===== */
+.dropdown-nested {
+    position: relative;
+    display: block;
+}
+
+.nested-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: inherit;
+    color: black;
+    background-color: #ffebeb;
+    text-decoration: none; 
+}
+
+.nested-submenu {
+    display: none;
+    padding-left: 0;
+    margin-left: 0;
+    background-color: #ffebeb;
+}
+
+.dropdown-nested.active .nested-submenu {
+    display: block;
+}
+
+.nested-submenu li {
+    list-style: none;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+    padding: 0;
+}
+
+.nested-submenu li:last-child {
+    border-bottom: none;
+}
+
+.nested-submenu a {
+    display: block;
+    padding: 10px 15px;
+    color: black;
+    background-color: #fff5f5;
+    text-decoration: none;
+}
+
+.nested-submenu a:hover {
+    text-decoration: underline;
+    background-color: #fff5f5;
+}
+
+.termine {
+    padding: 20px;
+}
+
+.termine-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.termin {
+    display: flex;
+    align-items: flex-start;
+    background-color: #f9f9f9;
+    border-left: 6px solid #ccc;
+    padding: 15px 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.termin.heimspiel {
+    border-left-color: #e60000;
+}
+
+.datum {
+    font-weight: bold;
+    font-size: 1.2em;
+    min-width: 140px;
+    margin-right: 20px;
+    color: #333;
+}
+
+.inhalt {
+    font-size: 1em;
+    color: #000;
+}
+
+.uhrzeit {
+    color: #555;
+    font-size: 0.95em;
+}
+
+.termin {
+    padding: 10px;
+    margin: 10px 0;
+    border-left: 8px solid gray;
+    background-color: #f9f9f9;
+}
+
+.heimspiel {
+    border-left-color: red;
+}
+
+.auswaertsspiel {
+    border-left-color: #333;
+    background-color: #f0f0f0;
+}
+
+.sonstig {
+    border-left-color: gray;
+}
+
+/* Footer */
+footer {
+    background-color: #e60000;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: white;
+}

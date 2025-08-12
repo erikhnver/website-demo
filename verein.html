@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportverein Esperke</title>
+    <link rel="stylesheet" href="style_verein.css">
+    <link rel="icon" type="image/png" href="SVE_Logo.png" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="SVE_Logo.png" alt="SV Esperke Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><h3>Startseite</h3></a></li>
+                <li><a href="ueberuns.html"><h3>Über uns</h3></a></li>
+    
+                <!-- Dropdown Fußball -->
+                <li class="dropdown">
+                    <a href="fussball.html"><h3>Fußball <span class="arrow-down">▼</span></h3></a>
+                    <ul class="dropdown-content">
+                        <li><a href="herren.html">Herren</a></li>
+                        <li><a href="herren2.html">2. Herren</a></li>
+                        <li><a href="jugend.html">Jugend</a></li>
+                        <li><a href="herrenue32.html">Herren Ü32</a></li>
+                        <li><a href="herrenue40.html">Herren Ü40</a></li>
+                    </ul>
+                </li>
+    
+                <li><a href="termine.html"><h3>Termine</h3></a></li>
+                <li><a href="kontakt.html"><h3>Kontakt</h3></a></li>
+    
+                <!-- Hamburger-Menü direkt mit Dropdown -->
+                <li class="dropdown">
+                    <div class="hamburger hamburger-icon">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><a href="verein.html">Verein</a></li>
+                        <li class="dropdown-nested" onclick="toggleSubmenu(this)">
+                            <a href="javascript:void(0)" class="nested-toggle">
+                                <span>Turnen</span>
+                                <span class="arrow-down">▼</span>
+                            </a>
+                            <ul class="nested-submenu">
+                                <li><a href="kinderturnen.html">Kinderturnen</a></li>
+                                <li><a href="damenturnen.html">Damenturnen</a></li>
+                            </ul>  
+                        </li>
+                        <li><a href="funlauf.html">Funlauf</a></li>
+                        <li><a href="vorstand.html">Vorstand</a></li>
+                        <li><a href="sportgruppe.html">Sportgruppe</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="verein">
+        <h1>Der Verein</h1>
+        <p class="einleitung">Sport verbindet – seit Jahrzehnten steht der SV Esperke für Bewegung, Gemeinschaft und Engagement.</p>
+        <hr>
+        <div class="info-box">
+            <h2>Mitglied werden</h2>
+            <p>Du möchtest Teil unseres Vereins werden? Lade hier den Mitgliedsantrag herunter und gib ihn im Vereinsheim oder bei deinem Übungsleiter ab.</p>
+            <a href="mitgliedsantrag-sve.pdf" class="button" target="_blank">Mitgliedsantrag herunterladen (PDF)</a>    
+        </div>
+        <hr>
+        <div class="info-box">
+            <h2>Unser Standort</h2>
+            <p><strong>Adresse:</strong><br>
+            SV Esperke<br>
+            Lange Straße 68<br>
+            31535 Neustadt am Rübenberge</p>
+        </div>
+        <div class="maps-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.1531475363126!2d9.471234!3d52.537890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b246c4da515e11%3A0x0000000000000000!2sLange%20Stra%C3%9Fe%2068%2C%2031535%20Neustadt%20am%20R%C3%BCbenberge!5e0!3m2!1sde!2sde!4v0000000000000"
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+    <footer>
+        <p>
+            SV Esperke |
+            <a href="impressum.html">Impressum</a> |
+            <a href="datenschutz.html">Datenschutz</a>
+        </p>
+    </footer>
+    <script>
+        function toggleSubmenu(element) {
+            element.classList.toggle('active');
+        }
+    </script>      
+</body>
+</html>

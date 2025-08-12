@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportverein Esperke</title>
+    <link rel="stylesheet" href="style_herren.css">
+    <link rel="icon" type="image/png" href="SVE_Logo.png" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="SVE_Logo.png" alt="SV Esperke Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html"><h3>Startseite</h3></a></li>
+                <li><a href="ueberuns.html"><h3>Über uns</h3></a></li>
+    
+                <!-- Dropdown Fußball -->
+                <li class="dropdown">
+                    <a href="fussball.html"><h3>Fußball <span class="arrow-down">▼</span></h3></a>
+                    <ul class="dropdown-content">
+                        <li><a href="herren.html">Herren</a></li>
+                        <li><a href="herren2.html">2. Herren</a></li>
+                        <li><a href="jugend.html">Jugend</a></li>
+                        <li><a href="herrenue32.html">Herren Ü32</a></li>
+                        <li><a href="herrenue40.html">Herren Ü40</a></li>
+                    </ul>
+                </li>
+    
+                <li><a href="termine.html"><h3>Termine</h3></a></li>
+                <li><a href="kontakt.html"><h3>Kontakt</h3></a></li>
+    
+                <!-- Hamburger-Menü direkt mit Dropdown -->
+                <li class="dropdown">
+                    <div class="hamburger hamburger-icon">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><a href="verein.html">Verein</a></li>
+                        <li class="dropdown-nested" onclick="toggleSubmenu(this)">
+                            <a href="javascript:void(0)" class="nested-toggle">
+                                <span>Turnen</span>
+                                <span class="arrow-down">▼</span>
+                            </a>
+                            <ul class="nested-submenu">
+                                <li><a href="kinderturnen.html">Kinderturnen</a></li>
+                                <li><a href="damenturnen.html">Damenturnen</a></li>
+                            </ul>  
+                        </li>
+                        <li><a href="funlauf.html">Funlauf</a></li>
+                        <li><a href="vorstand.html">Vorstand</a></li>
+                        <li><a href="sportgruppe.html">Sportgruppe</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="herren2">
+        <h3>2. Herren | Niedersachsen</h3>
+        <h2>SG Mandelsloh/Esperke</h2>
+        <img src="Mannschaften/herren2.png">
+        <br>
+        <h2>Mannschaftsverantwortliche</h2>
+        <table class="mannschaft">
+            <tr>
+              <td>Trainer</td>
+              <td>...</td>
+              <td>Tel.: ...</td>
+            </tr>
+        </table>
+        <h2>Trainingszeiten</h2>
+        <table class="trainingszeiten">
+            <tr>
+              <td>... & ... - ... bis ... Uhr</td>
+            </tr>
+            <tr>
+                <td>Sportplatz SV Esperke</td> 
+            </tr>
+        </table>
+        <h2>Spielplan & Ergebnisse</h2>
+        <a href="https://www.fussball.de/mannschaft/sg-mandelsloh-esperke-tv-mandelsloh-niedersachsen/-/saison/2526/team-id/02T7Q77NBG000000VS5489BSVU9LEHLB#!/" target="_blank" class="fussball-link fussball-link-block">
+        <img src="fussballde-logo.png" alt="fussball.de Logo" style="height: 30px; vertical-align: middle;">
+        <br>
+        <span style="padding-left: 20px;">Alle Spiele und Ergebnisse auf fussball.de ansehen</span>
+        </a>
+        <hr style="margin: 30px 0;">
+        
+        <div class="button-group">
+        <button class="filter-button" onclick="showSection('neuzugaenge')">Neuzugänge</button>
+        <button class="filter-button active" onclick="showSection('kader')">Kader</button>
+        <button class="filter-button" onclick="showSection('abgaenge')">Abgänge</button>
+        </div>
+
+        <div id="neuzugaenge" class="spieler-section" style="display: none;">
+            <h2>Neuzugänge</h2>
+            <!--div class="kader-grid">
+                <div class="spieler">
+                    <img src="Spieler/janheissmeyer.png" alt="Neuer Spieler">
+                    <p></p>
+                    <p></p>
+                </div>
+            </div -->
+        </div>
+
+        <div id="kader" class="spieler-section">
+            <h2>Kader</h2>
+            <!--div class="kader-grid">
+                <div class="spieler">
+                    <img src="Spieler/billerbeck.PNG" alt="Max Mustermann">
+                    <p> Fabian Billerbeck</p>
+                    <p>Torwart</p>
+                </div>
+            </div-->
+        </div>
+
+        <div id="abgaenge" class="spieler-section" style="display: none;">
+            <h2>Abgänge</h2>
+            <!--div class="kader-grid">
+                <div class="spieler">
+                    <img src="Spieler/yannicbertram.PNG" alt="Moritz Beispiel">
+                    <p> Yannic Bertram</p>
+                    <p>Abwehr</p>
+                </div>
+            </div-->
+        </div>
+    </div>
+    <footer>
+        <p>
+            SV Esperke |
+            <a href="impressum.html">Impressum</a> |
+            <a href="datenschutz.html">Datenschutz</a>
+        </p>
+    </footer>
+    <script>
+        function toggleSubmenu(element) {
+            element.classList.toggle('active');
+        }
+    </script>      
+</body>
+
+<script>
+function showSection(sectionId) {
+  const sections = ['kader', 'neuzugaenge', 'abgaenge'];
+  sections.forEach(id => {
+    document.getElementById(id).style.display = (id === sectionId) ? 'block' : 'none';
+  });
+
+  const buttons = document.querySelectorAll('.filter-button');
+  buttons.forEach(btn => btn.classList.remove('active'));
+
+  const activeBtn = Array.from(buttons).find(btn => btn.textContent.trim().toLowerCase() === sectionId.toLowerCase());
+  if (activeBtn) activeBtn.classList.add('active');
+}
+</script>
+
+</html>

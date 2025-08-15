@@ -452,9 +452,10 @@ nav {
 }
 
 .nav-links {
-    margin-left: 0; /* sorgt dafür, dass der Block nach rechts rückt */
+    margin-left: auto; /* sorgt dafür, dass der Block nach rechts rückt */
 }
 .hamburger {
     order: 6; /* falls du Flexbox-Reihenfolge nutzen möchtest */
 }
+
 

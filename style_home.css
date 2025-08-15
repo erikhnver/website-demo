@@ -21,7 +21,7 @@ nav {
 }
 
 .logo img {
-    height: 70px;
+    height: 60px;
 }
 
 .nav-links {
@@ -457,3 +457,4 @@ nav {
 .hamburger {
     order: 6; /* falls du Flexbox-Reihenfolge nutzen möchtest */
 }
+

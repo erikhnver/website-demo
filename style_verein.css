@@ -1,0 +1,335 @@
+/* ===== Grundlayout ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+/* ===== Header & Navigation ===== */
+header {
+    background-color: #e60000;
+    color: white;
+    padding: 20px 30px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.logo img {
+    height: 60px;
+    width:auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+.nav-links li a:visited,
+.nav-links li a:active {
+    color: white;
+}
+
+/* ===== Pfeil neben "Fußball" ===== */
+.arrow-down {
+    font-size: 0.7em;
+    margin-left: 5px;
+}
+
+/* ===== Dropdown-Menü ===== */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffebeb;
+    color: black;
+    min-width: 160px;
+    z-index: 1000;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 4px;
+
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.dropdown-content li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 0;
+    border-bottom: 1px solid #eee;
+    padding-left: 0; /* entfernt den Leerbereich links */
+}
+
+.dropdown-content li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a {
+    color: black !important;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-weight: normal;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffebeb; /* bleibt weiß */
+    color: black;            /* bleibt schwarz */
+    text-decoration: underline; /* optional: leichter Hover-Effekt */
+}
+
+/* ===== Hover bleibt erhalten ===== */
+.dropdown:hover .dropdown-content,
+.dropdown .dropdown-content:hover {
+    display: block;
+}
+
+/* ===== Vertikales Untermenü für Turnen im Hamburger-Menü ===== */
+.dropdown-nested {
+    position: relative;
+    display: block;
+}
+
+.nested-submenu {
+    display: none;
+    padding-left: 0;
+    margin-left: 0;
+    background-color: #faefef;
+}
+
+.dropdown-nested.active .nested-submenu {
+    display: block;
+}
+
+.nested-submenu li {
+    list-style: none;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+    padding: 0;
+}
+
+.nested-submenu li:last-child {
+    border-bottom: none;
+}
+
+.nested-submenu a {
+    display: block;
+    padding: 10px 15px;
+    color: black;
+    background-color: #fff5f5;
+    text-decoration: none;
+}
+
+.nested-submenu a:hover {
+    text-decoration: underline;
+    background-color: #fff5f5;
+}
+
+/* Hamburger-Icon immer vorne */
+.hamburger { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1001;
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  border-radius: 5px;
+}
+
+/* Standard-Zustände */
+.nav-links.nav-main { display: flex; }      /* Desktop sichtbar */
+.nav-links.nav-priority { display: none; }  /* Mobil sichtbar */
+.nav-links.nav-extra { 
+  display: none;               /* per JS aufklappen */
+  position: absolute;
+  top: 80px;                   /* Höhe des Headers */
+  right: 0;
+  width: 180px;
+  background: #ffebeb;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  flex-direction: column;
+  z-index: 1000;
+  padding: 8px 0;
+}
+
+/* Einheitliche Optik im Hamburger-Menü */
+.nav-links.nav-extra li { 
+  margin: 0;
+  padding: 0;
+}
+.nav-links.nav-extra a,
+.nav-links.nav-extra .nested-toggle {
+  display: block;
+  padding: 12px 20px;
+  color: #000 !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-links.nav-extra a:hover,
+.nav-links.nav-extra .nested-toggle:hover {
+  text-decoration: underline;
+  background: #ffebeb;
+}
+
+/* Weißer Kasten bei Turnen entfernen */
+.nav-links.nav-extra .nested-toggle {
+  background: transparent !important;
+}
+
+/* Untermenü Turnen im Hamburger-Menü */
+.nav-links.nav-extra .nested-submenu {
+  display: none;
+  background: #ffeeee;               
+}
+.nav-links.nav-extra .nested-submenu a {
+  padding-left: 32px;                 
+  color: #000 !important;
+  background: transparent;
+}
+.dropdown-nested.active .nested-submenu { display: block; }
+
+.nav-links.nav-priority {
+  display: none;  /* standardmäßig aus */
+}
+
+/* Mobile: Desktop-Menü ausblenden, kompakte Leiste zeigen */
+@media (max-width: 768px) {
+  .nav-links.nav-main { display: none; }
+  .nav-links.nav-priority { 
+    display: flex; 
+    gap: 20px; 
+    align-items: center;
+  }
+
+  .nav-priority .dropdown-content {
+    top: 100%;
+    left: 0;
+    transform: none;
+    background: #ffebeb;
+  }
+}
+
+/* Wenn Hamburger aktiv, Menü einblenden */
+.nav-links.nav-extra.active { display: flex; }
+
+/* Desktop-Pfeile weiß lassen */
+.nav-main .arrow-down { color: #fff; }
+
+nav {
+  justify-content: space-between; /* statt space-between */
+}
+
+/* Standard: Punkte sichtbar lassen */
+.desktop-hidden { 
+  display: list-item; 
+}
+
+/* Auf großen Bildschirmen ausblenden */
+@media (min-width: 769px) {
+  .desktop-hidden { 
+    display: none !important; 
+  }
+}
+
+.verein {
+    padding: 20px;
+}
+
+.einleitung {
+    padding-left: 20px;
+    font-size: 18px;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.info-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 5px solid #e60000;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #e60000;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #c40000;
+}
+
+.maps-container {
+    margin: 30px 0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Footer */
+footer {
+    background-color: #e60000;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: white;
+}

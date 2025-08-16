@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportverein Esperke</title>
+    <link rel="stylesheet" href="style_kontakt.css">
+    <link rel="icon" type="image/png" href="SVE_Logo.png" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="SVE_Logo.png" alt="SV Esperke Logo">
+            </div>
+
+            <!-- Hauptnavigation -->
+            <ul class="nav-links nav-main">
+                <li><a href="index.html"><h3>Startseite</h3></a></li>
+                <li><a href="ueberuns.html"><h3>Über uns</h3></a></li>
+
+                <!-- Dropdown Fußball -->
+                <li class="dropdown">
+                    <a href="fussball.html"><h3>Fußball <span class="arrow-down">▼</span></h3></a>
+                    <ul class="dropdown-content">
+                        <li><a href="herren.html">Herren</a></li>
+                        <li><a href="herren2.html">2. Herren</a></li>
+                        <li><a href="jugend.html">Jugend</a></li>
+                        <li><a href="herrenue32.html">Herren Ü32</a></li>
+                        <li><a href="herrenue40.html">Herren Ü40</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="termine.html"><h3>Termine</h3></a></li>
+                <li><a href="kontakt.html"><h3>Kontakt</h3></a></li>
+            </ul>
+
+            <ul class="nav-links nav-priority">
+                <li><a href="index.html"><h3>Startseite</h3></a></li>
+            </ul>
+
+            <!-- Hamburger-Icon -->
+            <div class="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <!-- Extra-Menü für Hamburger -->
+            <ul class="nav-links nav-extra">
+                <li class="desktop-hidden"><a href="ueberuns.html">Über uns</a></li>
+                <li class="dropdown-nested" onclick="toggleSubmenu(this)">
+                    <a href="javascript:void(0)" class="nested-toggle">
+                        <span>Fußball</span> <span class="arrow-down">▼</span>
+                    </a>
+                    <ul class="nested-submenu">
+                        <li><a href="herren.html">Herren</a></li>
+                        <li><a href="herren2.html">2. Herren</a></li>
+                        <li><a href="jugend.html">Jugend</a></li>
+                        <li><a href="herrenue32.html">Herren Ü32</a></li>
+                        <li><a href="herrenue40.html">Herren Ü40</a></li>
+                    </ul>
+                </li>
+                <li class="desktop-hidden"><a href="termine.html">Termine</a></li>
+                <li class="desktop-hidden"><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="verein.html">Verein</a></li>
+                <li class="dropdown-nested" onclick="toggleSubmenu(this)">
+                    <a href="javascript:void(0)" class="nested-toggle">
+                        <span>Turnen</span> <span class="arrow-down">▼</span>
+                    </a>
+                    <ul class="nested-submenu">
+                        <li><a href="kinderturnen.html">Kinderturnen</a></li>
+                        <li><a href="damenturnen.html">Damenturnen</a></li>
+                    </ul>
+                </li>
+                <li><a href="funlauf.html">Funlauf</a></li>
+                <li><a href="vorstand.html">Vorstand</a></li>
+                <li><a href="sportgruppe.html">Sportgruppe</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="kontakt">
+        <h1>Kontakt</h1>
+        <p class="einleitung">Du hast Fragen, Anregungen oder möchtest Mitglied werden? Dann melde dich gern bei uns!</p>
+        <hr>
+        <div class="info-box">
+            <h2>Kontaktinformationen</h2>
+            <p><strong>Adresse:</strong><br>
+            SV Esperke<br>
+            Lange Straße 68<br>
+            31535 Neustadt am Rübenberge</p>
+            <p><strong>Telefon:</strong><br>
+            <a>05073 / 92 59 02</a></p>
+            <p><strong>E-Mail:</strong><br>
+            <a>esperke@t-online.de</a></p>
+        </div>
+        <hr>
+        <div class="info-box">
+            <h2>Kontaktformular</h2>
+            <form action="https://formsubmit.co/erik.haase.9106@gmail.com" method="POST" target="_blank">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">E-Mail:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="nachricht">Nachricht:</label><br>
+                <textarea id="nachricht" name="nachricht" rows="5" required></textarea><br><br>
+
+                <button type="submit">Absenden</button>
+            </form>
+            <script>
+                const kontaktFormular = document.querySelector("form");
+                kontaktFormular.addEventListener("submit", function () {
+                    setTimeout(() => kontaktFormular.reset(), 100);
+                });
+            </script>
+        </div>
+        <hr>
+        <div class="social-media">
+            <h2>Folge uns auch hier:</h2>
+            <a href="https://www.instagram.com/svesperke" target="_blank" class="social-link">
+                <img src="instagram-icon.png" alt="Instagram"> Instagram
+            </a>
+            <a href="https://www.facebook.com/people/SV-Esperke-1929-ev/100057281987244/" target="_blank" class="social-link">
+                <img src="facebook-icon.png" alt="Facebook"> Facebook
+            </a>
+        </div>
+        <hr>
+        <div class="maps-container">
+            <h2>So findest du uns</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.1531475363126!2d9.471234!3d52.537890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b246c4da515e11%3A0x0000000000000000!2sLange%20Stra%C3%9Fe%2068%2C%2031535%20Neustadt%20am%20R%C3%BCbenberge!5e0!3m2!1sde!2sde!4v0000000000000"
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+    <footer>
+        <p>
+            SV Esperke |
+            <a href="impressum.html">Impressum</a> |
+            <a href="datenschutz.html">Datenschutz</a>
+        </p>
+    </footer>
+    <script>
+        function toggleSubmenu(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.querySelector('.hamburger');
+        const menuExtra = document.querySelector('.nav-extra');
+
+        if (hamburger && menuExtra) {
+            hamburger.addEventListener('click', () => {
+                const open = menuExtra.classList.toggle('active');
+                hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+        }
+
+        // Untermenü "Turnen" im Hamburger
+        window.toggleSubmenu = function(el) {
+            el.classList.toggle('active');
+        };
+    });
+    </script>      
+</body>
+</html>

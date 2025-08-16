@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportverein Esperke</title>
+    <link rel="stylesheet" href="style_sportgruppe.css">
+    <link rel="icon" type="image/png" href="SVE_Logo.png" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="SVE_Logo.png" alt="SV Esperke Logo">
+            </div>
+
+            <!-- Hauptnavigation -->
+            <ul class="nav-links nav-main">
+                <li><a href="index.html"><h3>Startseite</h3></a></li>
+                <li><a href="ueberuns.html"><h3>Über uns</h3></a></li>
+
+                <!-- Dropdown Fußball -->
+                <li class="dropdown">
+                    <a href="fussball.html"><h3>Fußball <span class="arrow-down">▼</span></h3></a>
+                    <ul class="dropdown-content">
+                        <li><a href="herren.html">Herren</a></li>
+                        <li><a href="herren2.html">2. Herren</a></li>
+                        <li><a href="jugend.html">Jugend</a></li>
+                        <li><a href="herrenue32.html">Herren Ü32</a></li>
+                        <li><a href="herrenue40.html">Herren Ü40</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="termine.html"><h3>Termine</h3></a></li>
+                <li><a href="kontakt.html"><h3>Kontakt</h3></a></li>
+            </ul>
+
+            <ul class="nav-links nav-priority">
+                <li><a href="index.html"><h3>Startseite</h3></a></li>
+            </ul>
+
+            <!-- Hamburger-Icon -->
+            <div class="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <!-- Extra-Menü für Hamburger -->
+            <ul class="nav-links nav-extra">
+                <li class="desktop-hidden"><a href="ueberuns.html">Über uns</a></li>
+                <li class="dropdown-nested" onclick="toggleSubmenu(this)">
+                    <a href="javascript:void(0)" class="nested-toggle">
+                        <span>Fußball</span> <span class="arrow-down">▼</span>
+                    </a>
+                    <ul class="nested-submenu">
+                        <li><a href="herren.html">Herren</a></li>
+                        <li><a href="herren2.html">2. Herren</a></li>
+                        <li><a href="jugend.html">Jugend</a></li>
+                        <li><a href="herrenue32.html">Herren Ü32</a></li>
+                        <li><a href="herrenue40.html">Herren Ü40</a></li>
+                    </ul>
+                </li>
+                <li class="desktop-hidden"><a href="termine.html">Termine</a></li>
+                <li class="desktop-hidden"><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="verein.html">Verein</a></li>
+                <li class="dropdown-nested" onclick="toggleSubmenu(this)">
+                    <a href="javascript:void(0)" class="nested-toggle">
+                        <span>Turnen</span> <span class="arrow-down">▼</span>
+                    </a>
+                    <ul class="nested-submenu">
+                        <li><a href="kinderturnen.html">Kinderturnen</a></li>
+                        <li><a href="damenturnen.html">Damenturnen</a></li>
+                    </ul>
+                </li>
+                <li><a href="funlauf.html">Funlauf</a></li>
+                <li><a href="vorstand.html">Vorstand</a></li>
+                <li><a href="sportgruppe.html">Sportgruppe</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="sportgruppe">
+        <h1>Herrensportgruppe</h1>
+        <p class="einleitung">Für alle, die sich gerne bewegen, fit bleiben und gemeinsam Spaß am Sport haben.</p>
+        <hr>
+        <div class="info-box">
+            <h2>Trainingszeiten</h2>
+            <p><strong>Wann?</strong> Jeden Mittwoch um 19:00 Uhr</p>
+            <p><strong>Dauer:</strong> ca. 2 Stunden</p>
+        </div>
+        <hr>
+        <div class="info-box">
+            <h2>Was wir machen</h2>
+            <ul>
+                <li>Rückengymnastik & funktionelle Übungen</li>
+                <li>Verschiedene Ballsportarten</li>
+                <li>Fahrradtouren im Sommer</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="info-box">
+            <h2>Ansprechpartner</h2>
+            <div class="ansprechpartner">
+                <p><strong>Uwe Stummeyer </strong><br>Tel.: 05073 1307</p>
+                <p><strong>Jörn Dierking </strong><br>Tel.: 05073 237</p>
+            </div>
+        </div>
+        <hr>
+        <div class="bildergalerie">
+            <h2>Impressionen</h2>
+            <div class="bilder-grid">
+                <img src="bild1.jpg" alt="Sportgruppe Bild 1">
+                <img src="bild2.jpg" alt="Sportgruppe Bild 2">
+                <img src="bild3.jpg" alt="Sportgruppe Bild 3">
+                <img src="bild4.jpg" alt="Sportgruppe Bild 4">
+                <img src="bild5.jpg" alt="Sportgruppe Bild 5">
+                <img src="bild6.jpg" alt="Sportgruppe Bild 6">
+                <img src="bild7.jpg" alt="Sportgruppe Bild 7">
+                <img src="bild8.jpg" alt="Sportgruppe Bild 8">
+            </div>
+            </div>
+    </div>
+    <footer>
+        <p>
+            SV Esperke |
+            <a href="impressum.html">Impressum</a> |
+            <a href="datenschutz.html">Datenschutz</a>
+        </p>
+    </footer>
+    <script>
+        function toggleSubmenu(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.querySelector('.hamburger');
+        const menuExtra = document.querySelector('.nav-extra');
+
+        if (hamburger && menuExtra) {
+            hamburger.addEventListener('click', () => {
+                const open = menuExtra.classList.toggle('active');
+                hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+        }
+
+        // Untermenü "Turnen" im Hamburger
+        window.toggleSubmenu = function(el) {
+            el.classList.toggle('active');
+        };
+    });
+    </script>      
+</body>
+</html>

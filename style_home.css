@@ -21,7 +21,8 @@ nav {
 }
 
 .logo img {
-    height: 6 0px;
+    height: 60px;
+    width: auto;
 }
 
 .nav-links {
@@ -469,3 +470,4 @@ nav {
     display: none !important; 
   }
 }
+
